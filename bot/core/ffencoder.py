@@ -25,7 +25,7 @@ class FFEncoder:
         self.__total_time = total_time
         self.__qual = qual
         self.dl_path = dl_path
-        self.out_path = ospath.join("encode", name)
+        self.out_path = out_path
         self.__proc = None
         self.is_cancelled = False
         self.__prog_file = "progress.txt"
