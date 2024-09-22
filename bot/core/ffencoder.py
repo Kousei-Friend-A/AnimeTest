@@ -19,7 +19,7 @@ ffargs = {
     '360': Var.FFCODE_360,
 }
 
-class Encoder:
+class FFEncoder:
     def __init__(self, name, total_time, qual, dl_path, out_path):
         self.__name = name
         self.__total_time = total_time
