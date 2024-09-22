@@ -44,7 +44,7 @@ class Var:
     BACKUP_CHANNEL = getenv("BACKUP_CHANNEL") or ""
     MAIN_CHANNEL = -1002298014172
     LOG_CHANNEL = int(getenv("LOG_CHANNEL") or 0)
-    FILE_STORE = -1002439933464
+    FILE_STORE = -1002419656293
     ADMINS = list(map(int, getenv("ADMINS", "1242011540").split()))
     
     SEND_SCHEDULE = "True"
