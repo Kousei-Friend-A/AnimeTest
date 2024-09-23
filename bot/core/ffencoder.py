@@ -20,16 +20,18 @@ ffargs = {
 }
 
 class FFEncoder:
-    def __init__(self, name, total_time, qual, dl_path, out_path):
-        self.__name = name
-        self.__total_time = total_time
-        self.__qual = qual
-        self.dl_path = dl_path
-        self.out_path = out_path
+    def __init__(self, message, path, name, qual):
         self.__proc = None
         self.is_cancelled = False
-        self.__prog_file = "progress.txt"
-    
+        self.message = message
+        self.__name = name
+        self.__qual = qual
+        self.dl_path = path
+        self.__total_time = None
+        self.out_path = ospath.join("encode", name)
+        self.__prog_file = 'prog.txt'
+        self.__start_time = time()
+        
     async def progress(self):
         while not self.is_cancelled:
             # Assume time_done, ensize, speed, diff are defined somewhere
